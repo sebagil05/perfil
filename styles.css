@@ -1,0 +1,106 @@
+/* 1. Variables CSS */
+:root {
+  --color-primario: #0d6efd;
+  --color-fondo: #f8f9fa;
+  --color-superficie: #ffffff;
+  --color-texto: #212529;
+  --color-borde: #dee2e6;
+
+  /* Espaciados consistentes en rem */
+  --espacio-sm: 0.5rem;
+  --espacio-md: 1rem;
+  --espacio-lg: 1.5rem;
+  --espacio-xl: 2rem;
+
+  --radio: 0.5rem;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+header {
+  background-color: var(--color-superficie);
+  padding: var(--espacio-md) var(--espacio-xl);
+  border-bottom: 1px solid var(--color-borde);
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: var(--espacio-md);
+}
+nav a {
+  text-decoration: none;
+  color: var(--color-primario);
+  font-weight: bold;
+}
+main {
+  max-width: 800px;
+  margin: var(--espacio-xl) auto;
+  padding: 0 var(--espacio-md);
+}
+section {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: var(--espacio-lg);
+  margin-bottom: var(--espacio-lg);
+}
+h1, h2 {
+  margin-bottom: var(--espacio-md);
+}
+ul {
+  padding-left: var(--espacio-lg);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--espacio-md);
+}
+th, td {
+  border: 1px solid var(--color-borde);
+  padding: var(--espacio-sm) var(--espacio-md);
+  text-align: left;
+}
+thead th {
+  background-color: var(--color-fondo);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-md);
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-sm);
+}
+input, textarea, button {
+  padding: var(--espacio-sm);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  font-family: inherit;
+  font-size: 1rem;
+}
+button {
+  background-color: var(--color-primario);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  padding: var(--espacio-sm) var(--espacio-lg);
+}
+footer {
+  text-align: center;
+  padding: var(--espacio-lg);
+  border-top: 1px solid var(--color-borde);
+  background-color: var(--color-superficie);
+}
